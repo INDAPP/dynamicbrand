@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Dynamic Brand</string>
+
+    <string-array name="principles_titles">
+        <item>1 Coerenza, legalità ed efficienza</item>
+        <item>2 Responsabilità, cautela e sostenibilità</item>
+        <item>3 Creatività ed Innovazione</item>
+        <item>4 Solidarietà sociale, equità e sicurezza</item>
+        <item>5 Partecipazione</item>
+        <item>6 Cura e bellezza</item>
+        <item>7 Genius loci</item>
+        <item>8 Consapevolezza</item>
+        <item>9 Semplicità e relazionalità</item>
+    </string-array>
+
+    <string-array name="principles_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>

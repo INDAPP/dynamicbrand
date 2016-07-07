@@ -20,10 +20,7 @@ import java.util.List;
  * interface.
  */
 public class PrincipleFragment extends Fragment {
-
-    // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
-    // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnPrincipleFragmentInteractionListener mListener;
 
@@ -34,8 +31,6 @@ public class PrincipleFragment extends Fragment {
     public PrincipleFragment() {
     }
 
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
     public static PrincipleFragment newInstance(int columnCount) {
         PrincipleFragment fragment = new PrincipleFragment();
         Bundle args = new Bundle();
@@ -67,7 +62,8 @@ public class PrincipleFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new PrincipleViewAdapter(new ArrayList<Object>(), mListener));
+            String[] principles = getResources().getStringArray(R.array.principles_titles);
+            recyclerView.setAdapter(new PrincipleViewAdapter(principles, mListener));
         }
         return view;
     }
@@ -101,7 +97,7 @@ public class PrincipleFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnPrincipleFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onPrincipleFragmentInteraction(Object object);
+        int onRequestPrincipleValue(int index);
+        void onSetPrincipleValue(int index, int value);
     }
 }
