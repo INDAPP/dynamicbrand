@@ -40,9 +40,9 @@ public class PrincipleViewAdapter extends RecyclerView.Adapter<PrincipleViewAdap
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.mTitle.setText(mTitles[position]);
-        if (null != mListener) {
+        if (null != mListener)
             holder.setValue(mListener.onRequestPrincipleValue(position));
-        }
+
         holder.mView.setBackgroundColor(holder.getValue() > 0 ?
                 ContextCompat.getColor(holder.mView.getContext(), R.color.colorPrimary) :
                 Color.WHITE);
@@ -52,7 +52,8 @@ public class PrincipleViewAdapter extends RecyclerView.Adapter<PrincipleViewAdap
                 if (null != mListener) {
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    mListener.onSetPrincipleValue(position, 1);
+
+                    mListener.onSetPrincipleValue(position, holder.getValue() > 0 ? 0 : 1);
                 }
             }
         });
@@ -86,7 +87,7 @@ public class PrincipleViewAdapter extends RecyclerView.Adapter<PrincipleViewAdap
         public ViewHolder(View view, String[] values) {
             super(view);
             mView = view;
-            mTitle = (TextView) view.findViewById(R.id.id);
+            mTitle = (TextView) view.findViewById(R.id.title);
             mSpinner = (Spinner) view.findViewById(R.id.spinner);
             mSpinner.setAdapter(new ArrayAdapter<>(view.getContext(),
                     android.R.layout.simple_spinner_item,values));

@@ -20,12 +20,8 @@ import java.util.List;
  * interface.
  */
 public class AreaFragment extends Fragment {
-
-    // TODO: Customize parameter argument names
-    private static final String ARG_COLUMN_COUNT = "column-count";
-    // TODO: Customize parameters
-    private int mColumnCount = 1;
     private OnAreaFragmentInteractionListener mListener;
+    private AreaViewAdapter mAdapter;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -34,14 +30,15 @@ public class AreaFragment extends Fragment {
     public AreaFragment() {
     }
 
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
-    public static AreaFragment newInstance(int columnCount) {
+    public static AreaFragment newInstance() {
         AreaFragment fragment = new AreaFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
-        fragment.setArguments(args);
+//        Bundle args = new Bundle();
+//        fragment.setArguments(args);
         return fragment;
+    }
+
+    public void update() {
+        mAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -49,7 +46,7 @@ public class AreaFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
+
         }
     }
 
@@ -62,12 +59,10 @@ public class AreaFragment extends Fragment {
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
-            if (mColumnCount <= 1) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            } else {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
-            }
-            recyclerView.setAdapter(new AreaViewAdapter(new ArrayList<Object>(), mListener));
+            recyclerView.setLayoutManager(new LinearLayoutManager(context));
+            String[] areas = getResources().getStringArray(R.array.areas_titles);
+            mAdapter = new AreaViewAdapter(areas, mListener);
+            recyclerView.setAdapter(mAdapter);
         }
         return view;
     }
@@ -101,7 +96,7 @@ public class AreaFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnAreaFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onAreaFragmentInteraction(Object item);
+        boolean onRequestAreaValue(int index);
+        void onSetAreasValue(int index, boolean value);
     }
 }
