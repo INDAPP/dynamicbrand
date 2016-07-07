@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">Dynamic Brand</string>
+
+    <string-array name="company_name">
+        <item>Fira</item>
+        <item>lib2</item>
+        <item>lib3</item>
+        <item>blablalbalablab</item>
+        <item>blablabladddd</item>
+        <item>lib3</item>
+    </string-array>
+
+    <string-array name="company_description">
+        <item>blablalbalablab</item>
+        <item>blablabladddd</item>
+        <item>lib3</item>
+        <item>blablalbalablab</item>
+        <item>blablabladddd</item>
+        <item>lib3</item>
+    </string-array>
+
+    <string-array name="url_company_details">
+        <item>www.google.it</item>
+        <item>www.repubblica.it</item>
+        <item>www.fdcmessina.org/</item>
+        <item>www.fdcmessina.org/</item>
+        <item>www.fdcmessina.org/</item>
+        <item>www.fdcmessina.org/</item>
+    </string-array>
+
+
 </resources>
