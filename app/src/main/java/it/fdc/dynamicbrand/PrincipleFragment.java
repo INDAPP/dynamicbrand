@@ -20,12 +20,8 @@ import java.util.List;
  * interface.
  */
 public class PrincipleFragment extends Fragment {
-
-    // TODO: Customize parameter argument names
-    private static final String ARG_COLUMN_COUNT = "column-count";
-    // TODO: Customize parameters
-    private int mColumnCount = 1;
     private OnPrincipleFragmentInteractionListener mListener;
+    private PrincipleViewAdapter mAdapter;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -34,14 +30,15 @@ public class PrincipleFragment extends Fragment {
     public PrincipleFragment() {
     }
 
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
-    public static PrincipleFragment newInstance(int columnCount) {
+    public static PrincipleFragment newInstance() {
         PrincipleFragment fragment = new PrincipleFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
-        fragment.setArguments(args);
+//        Bundle args = new Bundle();
+//        fragment.setArguments(args);
         return fragment;
+    }
+
+    public void update() {
+        mAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -49,7 +46,7 @@ public class PrincipleFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
+
         }
     }
 
@@ -62,12 +59,10 @@ public class PrincipleFragment extends Fragment {
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
-            if (mColumnCount <= 1) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            } else {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
-            }
-            recyclerView.setAdapter(new PrincipleViewAdapter(new ArrayList<Object>(), mListener));
+            recyclerView.setLayoutManager(new LinearLayoutManager(context));
+            String[] principles = getResources().getStringArray(R.array.principles_titles);
+            mAdapter = new PrincipleViewAdapter(principles, mListener);
+            recyclerView.setAdapter(mAdapter);
         }
         return view;
     }
@@ -101,7 +96,7 @@ public class PrincipleFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnPrincipleFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onPrincipleFragmentInteraction(Object object);
+        int onRequestPrincipleValue(int index);
+        void onSetPrincipleValue(int index, int value);
     }
 }
