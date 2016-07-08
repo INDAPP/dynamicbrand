@@ -33,24 +33,9 @@ public class AreaViewAdapter extends RecyclerView.Adapter<AreaViewAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, final int position) {
-        holder.mTitle.setText(mTitles[position]);
-        if (null != mListener)
-            holder.select(mListener.onRequestAreaValue(position));
-
-        holder.mView.setBackgroundColor(holder.isSelected() ?
-                ContextCompat.getColor(holder.mView.getContext(), R.color.colorPrimary) :
-                Color.WHITE);
-
-        holder.mView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (null != mListener) {
-
-                    mListener.onSetAreasValue(position, !holder.isSelected());
-                }
-            }
-        });
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.bind(position);
+        holder.mView.setOnClickListener(holder);
     }
 
     @Override
@@ -58,23 +43,32 @@ public class AreaViewAdapter extends RecyclerView.Adapter<AreaViewAdapter.ViewHo
         return mTitles.length;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public final View mView;
         public final TextView mTitle;
-        public boolean selected = false;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
             mTitle = (TextView) view.findViewById(R.id.title);
+            mView.setOnClickListener(this);
         }
 
-        public void select(boolean select) {
-            selected = select;
+        public void bind(int position) {
+            if (position >= 0) {
+                mTitle.setText(mTitles[position]);
+                boolean value = mListener.onRequestAreaValue(position);
+                mView.setBackgroundResource(value ? R.color.colorSelected : R.color.colorUnselected);
+            }
         }
 
-        public boolean isSelected() {
-            return selected;
+        @Override
+        public void onClick(View v) {
+            int position = getAdapterPosition();
+            if (position < 0) return;
+            boolean value = mListener.onRequestAreaValue(position);
+            mListener.onSetAreasValue(position, !value);
+            bind(position);
         }
     }
 }

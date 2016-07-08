@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 
@@ -19,10 +20,11 @@ import java.util.Arrays;
  * TODO: Replace the implementation with code for your data type.
  */
 public class PrincipleViewAdapter extends RecyclerView.Adapter<PrincipleViewAdapter.ViewHolder> {
-
+    private static final int MAX_PRINCIPLES = 6;
     private final String[] mTitles;
     private final PrincipleFragment.OnPrincipleFragmentInteractionListener mListener;
     private String[] mValues;
+    private int mSelectedItemCount = 0;
 
     public PrincipleViewAdapter(String[] values, PrincipleFragment.OnPrincipleFragmentInteractionListener listener) {
         mListener = listener;
@@ -38,40 +40,10 @@ public class PrincipleViewAdapter extends RecyclerView.Adapter<PrincipleViewAdap
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, final int position) {
-        holder.mTitle.setText(mTitles[position]);
-        if (null != mListener)
-            holder.setValue(mListener.onRequestPrincipleValue(position));
-
-        holder.mView.setBackgroundColor(holder.getValue() > 0 ?
-                ContextCompat.getColor(holder.mView.getContext(), R.color.colorPrimary) :
-                Color.WHITE);
-        holder.mView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (null != mListener) {
-                    // Notify the active callbacks interface (the activity, if the
-                    // fragment is attached to one) that an item has been selected.
-
-                    mListener.onSetPrincipleValue(position, holder.getValue() > 0 ? 0 : 1);
-                }
-            }
-        });
-
-        holder.mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int p, long id) {
-                if (null != mListener)
-                    mListener.onSetPrincipleValue(position,
-                            Integer.valueOf(parent.getSelectedItem().toString()));
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                if (null != mListener)
-                    mListener.onSetPrincipleValue(position, 0);
-            }
-        });
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.bind(position);
+        holder.mView.setOnClickListener(holder);
+        holder.mSpinner.setOnItemSelectedListener(holder);
     }
 
     @Override
@@ -79,10 +51,12 @@ public class PrincipleViewAdapter extends RecyclerView.Adapter<PrincipleViewAdap
         return mTitles.length;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public final View mView;
-        public final TextView mTitle;
-        public final Spinner mSpinner;
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements
+            View.OnClickListener, AdapterView.OnItemSelectedListener {
+        private final View mView;
+        private final TextView mTitle;
+        private final Spinner mSpinner;
 
         public ViewHolder(View view, String[] values) {
             super(view);
@@ -91,14 +65,56 @@ public class PrincipleViewAdapter extends RecyclerView.Adapter<PrincipleViewAdap
             mSpinner = (Spinner) view.findViewById(R.id.spinner);
             mSpinner.setAdapter(new ArrayAdapter<>(view.getContext(),
                     android.R.layout.simple_spinner_item,values));
+            mView.setOnClickListener(this);
+            mSpinner.setOnItemSelectedListener(this);
         }
 
-        public int getValue() {
-            return Integer.valueOf(mSpinner.getSelectedItem().toString());
+        public void bind(int position) {
+            if (position >= 0) {
+                int count = mListener.onRequestPrincipleSelectedCount();
+                mTitle.setText(mTitles[position]);
+                int value = mListener.onRequestPrincipleValue(position);
+                mSpinner.setSelection(value);
+                mView.setBackgroundResource(value > 0 ? R.color.colorSelected : R.color.colorUnselected);
+                mSpinner.setEnabled((count < MAX_PRINCIPLES || value > 0 ) && position != 0 && position != 7);
+
+            }
         }
 
-        public void setValue(int value) {
-            mSpinner.setSelection(value);
+        @Override
+        public void onClick(View v) {
+            int position = getAdapterPosition();
+            int count = mListener.onRequestPrincipleSelectedCount();
+            int value = mListener.onRequestPrincipleValue(position);
+            if ((count >= MAX_PRINCIPLES && value == 0) || position <= 0 || position == 7) {
+                if (position == 0 || position == 7)
+                    Toast.makeText(v.getContext(),
+                            "Questo principio è imprescindibile per il territorio",
+                            Toast.LENGTH_SHORT).show();
+                else if (count >= MAX_PRINCIPLES)
+                    Toast.makeText(v.getContext(),
+                            "Puoi selezionare al massimo 6 principi",
+                            Toast.LENGTH_SHORT).show();
+                return;
+            }
+            mListener.onSetPrincipleValue(position, value > 0 ? 0 : 1);
+            bind(position);
+        }
+
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int value, long id) {
+            int position = getAdapterPosition();
+            if (position <= 0 || position == 7) return;
+            mListener.onSetPrincipleValue(position, value);
+            bind(position);
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+            int position = getAdapterPosition();
+            if (position <= 0 || position == 7) return;
+            mListener.onSetPrincipleValue(position, 0);
+            bind(position);
         }
     }
 

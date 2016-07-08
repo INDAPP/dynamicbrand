@@ -6,10 +6,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.Point;
 import android.graphics.PointF;
+import android.graphics.Rect;
 import android.graphics.RectF;
-import android.graphics.Shader;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
@@ -29,6 +29,7 @@ public class BrandImageView extends ImageView {
 
     private RectF mBounds = new RectF();
     private RectF mBoundsInset = new RectF();
+    private Rect mOverlayBounds = new Rect();
     private PointF mPoint1 = new PointF();
     private PointF mPoint8 = new PointF();
     private List<PointF> mPoints = new ArrayList<>();
@@ -175,6 +176,11 @@ public class BrandImageView extends ImageView {
             float r = mPointsValue.get(i);
             canvas.drawCircle(p.x,p.y,r,mPointPaint);
         }
+
+        Drawable overlay = ContextCompat.getDrawable(getContext(), R.drawable.tsr_overlay);
+        mBoundsInset.round(mOverlayBounds);
+        overlay.setBounds(mOverlayBounds);
+        overlay.draw(canvas);
     }
 
     public void setData(int[] principles, boolean[] areas) {

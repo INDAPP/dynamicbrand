@@ -9,4 +9,7 @@
     <color name="brandBlue">#80006AB3</color>
     <color name="brandOrange">#80F29400</color>
     <color name="brandGreen">#8097BF0D</color>
+
+    <color name="colorSelected">#cf6752</color>
+    <color name="colorUnselected">#FFF</color>
 </resources>
