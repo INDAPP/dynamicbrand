@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="it.fdc.dynamicbrand.GenerationActivity">
-    <ImageView
+
+    <it.fdc.dynamicbrand.BrandImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="0dp"

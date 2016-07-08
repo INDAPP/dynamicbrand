@@ -98,5 +98,6 @@ public class PrincipleFragment extends Fragment {
     public interface OnPrincipleFragmentInteractionListener {
         int onRequestPrincipleValue(int index);
         void onSetPrincipleValue(int index, int value);
+        int onRequestPrincipleSelectedCount();
     }
 }

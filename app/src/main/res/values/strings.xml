@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Dynamic Brand</string>
+    <string name="action_reset">Reset</string>
 
     <string-array name="tab_section">
         <item>Principi</item>
@@ -25,6 +26,18 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
+    </string-array>
+
+    <string-array name="principles_weight">
+        <item>0.77</item>
+        <item>0.57</item>
+        <item>0.60</item>
+        <item>0.77</item>
+        <item>0.48</item>
+        <item>0.92</item>
+        <item>0.35</item>
+        <item>0.31</item>
+        <item>0.20</item>
     </string-array>
 
     <string-array name="areas_titles">
