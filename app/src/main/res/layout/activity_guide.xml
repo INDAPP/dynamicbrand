@@ -7,12 +7,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    tools:context="it.fdc.dynamicbrand.LicencesActivity">
-
+    tools:context="it.fdc.dynamicbrand.GuideActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="20sp"
-        android:id="@+id/licenseText" />
+        android:id="@+id/guideText" />
 </ScrollView>
