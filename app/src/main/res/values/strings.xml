@@ -2,16 +2,56 @@
     <string name="app_name">Dynamic Brand</string>
 
     <string-array name="company_name">
-        <item>Fira</item>
-        <item>lib2</item>
-        <item>lib3</item>
-        <item>blablalbalablab</item>
-        <item>blablabladddd</item>
-        <item>lib3</item>
+        <item>Birrificio Messina</item>
+        <item>Fondazione Horcynus Orca</item>
+        <item>Solidarity and Energy</item>
+        <item>MECC</item>
+        <item>EcoGAStronomia</item>
+        <item>EcoS-Med</item>
     </string-array>
 
     <string-array name="company_description">
-        <item>blablalbalablab</item>
+        <item>La cooperativa Birrificio Messina nasce nel 2013 dalla volontà di 15 birrai disoccupati che hanno investito il proprio TFR e i proventi di una raccolta fondi per riavviare in città la storica produzione di birra.
+        <!--<item>
+            La cooperativa Birrificio Messina nasce nel 2013 dalla volontà di 15 birrai disoccupati che hanno investito il proprio TFR e i proventi di una raccolta fondi per riavviare in città la storica produzione di birra.<br /> <br />
+            <b>Principi</b><br />
+            <foo>
+   <orderedlist>
+      <li>
+         <num>1</num>
+         <text>Coerenza, legalità ed efficienza</text>
+      </li>
+      <li>
+         <num>2</num>
+         <text>Responsabilità, cautela e sostenibilità</text>
+      </li>
+       <li>
+         <num>3</num>
+         <text>Solidarietà sociale, equità e sicurezza</text>
+      </li>
+       <li>
+         <num>4</num>
+         <text>Partecipazione</text>
+      </li>
+       <li>
+         <num>5</num>
+         <text>Consapevolezza</text>
+      </li>
+       <li>
+         <num>6</num>
+         <text>Semplicità e relazionalità</text>
+      </li>
+   </orderedlist>
+   <orderedlist>
+      <li>
+         <num>A</num>
+         <text>Produzioni agroalimentari</text>
+      </li>
+
+   </orderedlist>
+</foo>
+</item>-->
+        </item>
         <item>blablabladddd</item>
         <item>lib3</item>
         <item>blablalbalablab</item>
@@ -20,12 +60,12 @@
     </string-array>
 
     <string-array name="url_company_details">
-        <item>www.google.it</item>
-        <item>www.repubblica.it</item>
-        <item>www.fdcmessina.org/</item>
-        <item>www.fdcmessina.org/</item>
-        <item>www.fdcmessina.org/</item>
-        <item>www.fdcmessina.org/</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/birrificio-messina/</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/fondazione-horcynus-orca/</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/esco/</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/mecc/</item>
+        <item>www.gas.fdcmessina.org/gas_messina/00000305_GAS_Messina.html</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/ecos-med/</item>
     </string-array>
 
 

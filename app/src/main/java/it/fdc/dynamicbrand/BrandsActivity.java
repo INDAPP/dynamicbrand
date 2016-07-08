@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -36,13 +35,13 @@ public class BrandsActivity extends AppCompatActivity{
     }
 
 
-    public class Data implements Serializable {
+    public class Data {
         public String brandName;
         public String brandDescription;
         public String brandDetails;
-        public Drawable brandLogo;
+        public int brandLogo;
 
-        Data(String title, String description, Drawable imageId, String details) {
+        Data(String title, String description, int imageId, String details) {
             this.brandName = title;
             this.brandDescription = description;
             this.brandLogo = imageId;
@@ -116,7 +115,7 @@ public class BrandsActivity extends AppCompatActivity{
             //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
             this.brandName.setText(data.brandName);
             //holder.description.setText(list.get(position).description);
-            this.brandLogo.setImageDrawable(data.brandLogo);
+            this.brandLogo.setImageResource(data.brandLogo);
             this.data = data;
 
         }
@@ -124,10 +123,13 @@ public class BrandsActivity extends AppCompatActivity{
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(BrandsActivity.this, InfoActivity.class);
-//            Bundle extras = new Bundle();
-//
-//            extras.putSerializable("value",data);
-//            intent.putExtras(extras);
+            Bundle extras = new Bundle();
+
+            extras.putString(InfoActivity.nameCompany, this.data.brandName);
+            extras.putString(InfoActivity.companyDescription, this.data.brandDescription);
+            extras.putString(InfoActivity.urlDetails, this.data.brandDetails);
+            extras.putInt(InfoActivity.logoID, this.data.brandLogo);
+            intent.putExtras(extras);
             startActivity(intent);
 
         }
@@ -139,12 +141,12 @@ public class BrandsActivity extends AppCompatActivity{
         String[] companyUrlDetails = getResources().getStringArray(R.array.url_company_details);
         TypedArray companyLogos = getResources().obtainTypedArray(R.array.company_logo);
 
-
-
         List<Data> data = new ArrayList<>();
         for(int i=0; i<companyName.length; i++) {
-            Drawable logo = companyLogos.getDrawable(i);
-            data.add(new Data(companyName[i], companyDescription[i], logo ,companyUrlDetails[i]));
+            int imageId = companyLogos.getResourceId(i,R.drawable.ic_fire_tsr);
+
+//            Drawable logo = companyLogos.getDrawable(i);
+            data.add(new Data(companyName[i], companyDescription[i], imageId ,companyUrlDetails[i]));
 
           }
             return data;
