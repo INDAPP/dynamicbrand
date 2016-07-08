@@ -3,7 +3,9 @@
     <color name="colorPrimary">#6b1301</color>
     <color name="colorPrimaryDark">#3d0b01</color>
     <color name="colorAccent">#FFF</color>
-    
+
+    <color name="colorPrimaryTransparent">#66d92400</color>
+
     <color name="brandPoints">#000</color>
     <color name="brandAreas">#C6C7C8</color>
     <color name="brandBlue">#80006AB3</color>
@@ -12,4 +14,5 @@
 
     <color name="colorSelected">#cf6752</color>
     <color name="colorUnselected">#FFF</color>
+    <color name="colorButtonTransparent">#4FFF</color>
 </resources>

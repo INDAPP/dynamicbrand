@@ -8,17 +8,21 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GenerationActivity" />
-        <activity android:name=".BrandsActivity" />
+        <activity android:name=".GenerationActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".BrandsActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".InfoActivity"
+            android:parentActivityName=".BrandsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".LicencesActivity" />
 
