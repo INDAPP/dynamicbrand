@@ -27,6 +27,18 @@
         <item>5</item>
     </string-array>
 
+    <string-array name="principles_weight">
+        <item>0.77</item>
+        <item>0.57</item>
+        <item>0.60</item>
+        <item>0.77</item>
+        <item>0.48</item>
+        <item>0.92</item>
+        <item>0.35</item>
+        <item>0.31</item>
+        <item>0.20</item>
+    </string-array>
+
     <string-array name="areas_titles">
         <item>A Cultura, arte</item>
         <item>B Progettazione e design</item>
