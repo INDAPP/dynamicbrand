@@ -1,5 +1,86 @@
 <resources>
     <string name="app_name">Dynamic Brand</string>
-    <string name="activity_main_card_text1">Genera Logo</string>
-    <string name="activity_main_card_text2">Loghi Esistenti</string>
+
+    <string-array name="company_name">
+        <item>Birrificio Messina</item>
+        <item>Fondazione Horcynus Orca</item>
+        <item>Solidarity and Energy</item>
+        <item>MECC</item>
+        <item>EcoGAStronomia</item>
+        <item>EcoS-Med</item>
+    </string-array>
+
+    <string-array name="company_description">
+        <item>La cooperativa Birrificio Messina nasce nel 2013 dalla volontà di 15 birrai disoccupati che hanno investito il proprio TFR e i proventi di una raccolta fondi per riavviare in città la storica produzione di birra.</item>
+        <item>blablabladddd</item>
+        <item>lib3</item>
+        <item>blablalbalablab</item>
+        <item>blablabladddd</item>
+        <item>lib3</item>
+    </string-array>
+
+    <string-array name="url_company_details">
+        <item>www.fdcmessina.org/index.php/pag-sezione/birrificio-messina/</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/fondazione-horcynus-orca/</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/esco/</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/mecc/</item>
+        <item>www.gas.fdcmessina.org/gas_messina/00000305_GAS_Messina.html</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/ecos-med/</item>
+    </string-array>
+
+
+    <string name="action_reset">Reset</string>
+
+    <string-array name="tab_section">
+        <item>Principi</item>
+        <item>Ambiti</item>
+    </string-array>
+
+    <string-array name="principles_titles">
+        <item>1 Coerenza, legalità ed efficienza</item>
+        <item>2 Responsabilità, cautela e sostenibilità</item>
+        <item>3 Creatività ed Innovazione</item>
+        <item>4 Solidarietà sociale, equità e sicurezza</item>
+        <item>5 Partecipazione</item>
+        <item>6 Cura e bellezza</item>
+        <item>7 Genius loci</item>
+        <item>8 Consapevolezza</item>
+        <item>9 Semplicità e relazionalità</item>
+    </string-array>
+
+    <string-array name="principles_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="principles_weight">
+        <item>0.77</item>
+        <item>0.57</item>
+        <item>0.60</item>
+        <item>0.77</item>
+        <item>0.48</item>
+        <item>0.92</item>
+        <item>0.35</item>
+        <item>0.31</item>
+        <item>0.20</item>
+    </string-array>
+
+    <string-array name="areas_titles">
+        <item>A Cultura, arte</item>
+        <item>B Progettazione e design</item>
+        <item>C Ricerca e innovazione tecnologica</item>
+        <item>D Welfare di comunità e servizi</item>
+        <item>E Servizi alle imprese</item>
+        <item>F Formazione</item>
+        <item>G Informatica</item>
+        <item>H Finanza etica</item>
+        <item>I Energie rinnovabili ed efficenza energetica</item>
+        <item>L Produzioni e manufatti</item>
+        <item>M Produzioni agroalimentari</item>
+        <item>N Archivi e documentazione</item>
+    </string-array>
 </resources>

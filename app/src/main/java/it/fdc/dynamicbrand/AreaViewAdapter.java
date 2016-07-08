@@ -1,5 +1,7 @@
 package it.fdc.dynamicbrand;
 
+import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,11 +17,11 @@ import java.util.List;
  */
 public class AreaViewAdapter extends RecyclerView.Adapter<AreaViewAdapter.ViewHolder> {
 
-    private final List<Object> mValues;
+    private final String[] mTitles;
     private final AreaFragment.OnAreaFragmentInteractionListener mListener;
 
-    public AreaViewAdapter(List<Object> items, AreaFragment.OnAreaFragmentInteractionListener listener) {
-        mValues = items;
+    public AreaViewAdapter(String[] values, AreaFragment.OnAreaFragmentInteractionListener listener) {
+        mTitles = values;
         mListener = listener;
     }
 
@@ -31,42 +33,42 @@ public class AreaViewAdapter extends RecyclerView.Adapter<AreaViewAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-
-        holder.mView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (null != mListener) {
-                    // Notify the active callbacks interface (the activity, if the
-                    // fragment is attached to one) that an item has been selected.
-                    mListener.onAreaFragmentInteraction(holder.mItem);
-                }
-            }
-        });
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.bind(position);
+        holder.mView.setOnClickListener(holder);
     }
 
     @Override
     public int getItemCount() {
-        return mValues.size();
+        return mTitles.length;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public final View mView;
-        public final TextView mIdView;
-        public final TextView mContentView;
-        public Object mItem;
+        public final TextView mTitle;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mIdView = (TextView) view.findViewById(R.id.id);
-            mContentView = (TextView) view.findViewById(R.id.content);
+            mTitle = (TextView) view.findViewById(R.id.title);
+            mView.setOnClickListener(this);
+        }
+
+        public void bind(int position) {
+            if (position >= 0) {
+                mTitle.setText(mTitles[position]);
+                boolean value = mListener.onRequestAreaValue(position);
+                mView.setBackgroundResource(value ? R.color.colorSelected : R.color.colorUnselected);
+            }
         }
 
         @Override
-        public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
+        public void onClick(View v) {
+            int position = getAdapterPosition();
+            if (position < 0) return;
+            boolean value = mListener.onRequestAreaValue(position);
+            mListener.onSetAreasValue(position, !value);
+            bind(position);
         }
     }
 }

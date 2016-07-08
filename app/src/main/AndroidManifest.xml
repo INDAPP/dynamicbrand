@@ -17,8 +17,12 @@
         </activity>
         <activity android:name=".GenerationActivity" />
         <activity android:name=".BrandsActivity" />
-        <activity android:name=".InfoActivity" />
-        <activity android:name=".LicencesActivity"></activity>
+        <activity
+            android:name=".InfoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LicencesActivity" />
+
+
     </application>
 
 </manifest>
