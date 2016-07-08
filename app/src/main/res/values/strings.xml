@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Dynamic Brand</string>
+    <string name="activity_main_card_text1">Genera Logo</string>
+    <string name="activity_main_card_text2">Loghi Esistenti</string>
 </resources>
