@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="company_logo">
+        <item>@drawable/ic_birrificiomessima</item>
+        <item>@drawable/ic_fondazionehorcynusorca</item>
+        <item>@drawable/ic_solidarityandenergy</item>
+        <item>@drawable/ic_mecc</item>
+        <item>@drawable/ic_gas</item>
+        <item>@drawable/ic_ecosmed</item>
+    </array>
+
+</resources>

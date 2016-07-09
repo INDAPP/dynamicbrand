@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Dynamic Brand</string>
+
     <string name="info_t">Info sulla metodologia TSR</string>
     <string name="info1">La metodologia dei Territori Socialmente Responsabili TSR® è un approccio partecipativo e co-certificabile ideato dalla rete europea dell’economia sociale e solidale REVES e adottato dalla Fondazione di Comunità di Messina. È uno strumento di costruzione di coesione e capitale sociale mirato a far convergere le politiche e le pratiche di enti pubblici, organizzazioni e imprese verso i principi in cui si riconosce la comunità locale.</string>
     <string name="guide_title">Guida</string>
@@ -9,9 +10,186 @@
         <item></item>
         <item></item>
     </string-array>
+
     <string-array name="guide_strings">
-        <item>Attraverso la compilazione di un form<strong>la società aderente al TSR sceglie fino a 4 principi, definendo per ognuno un\'importanza da 1 a 5 e individua fino a 9 ambiti operativi.</strong>\n<u>Queste scelte rappresentano la sua "identità" di appartenenza al Distretto e saranno riflesse nel marchio personalizzato.</u></item>
-        <item></item>
-        <item></item>
+        <item>guida1</item>
+        <item>guida2</item>
+        <item>guida3</item>
+    </string-array>
+
+    <string name="choose_browser">Con quale browser vuoi continuare?</string>
+
+    <string-array name="company_name">
+        <item>Birrificio Messina</item>
+        <item>Fondazione Horcynus Orca</item>
+        <item>Solidarity and Energy</item>
+        <item>MECC</item>
+        <item>EcoGAStronomia</item>
+        <item>EcoS-Med</item>
+    </string-array>
+
+    <string-array name="company_description">
+        <item>La cooperativa Birrificio Messina nasce nel 2013 dalla volontà di 15 birrai disoccupati che hanno investito il proprio TFR e i proventi di una raccolta fondi per riavviare in città la storica produzione di birra.
+
+PRINCIPI:
+1. Coerenza, legalità ed efficienza
+2. Responsabilità, cautela e sostenibilità
+4. Solidarietà sociale, equità e sicurezza
+5. Partecipazione
+8. Consapevolezza
+9. Semplicità e relazionalità
+
+AMBITI
+M_Produzioni agroalimentari
+</item>
+        <item>La Fondazione Horcynus Orca promuove da anni percorsi internazionali di ricerca sulle economie sociali e sulle estetiche del Mediterraneo che più di ogni altra forma del sapere umano hanno la capacità di anticipare bisogni, desideri e visioni dei popoli.
+
+PRINCIPI:
+1. Coerenza, legalità ed efficienza;
+2. Responsabilità, cautela e sostenibilità
+3. Creatività ed Innovazione
+5. Partecipazione
+7. Genius loci
+8. Consapevolezza
+
+
+AMBITI:
+A_Cultura, arte
+B_Progettazione e design
+C_Ricerca e innovazione tecnologica
+H_Finanza etica
+I_Energie rinnovabili ed efficenza energetica
+N_Archivi e documentazione
+</item>
+        <item>Solidarity and Energy nasce per promuovere programmi di social green economy con iniziative innovative di riconversione a basso impatto energetico. L’obiettivo è sostenere con i risparmi ottenuti forme evolute di economia civile sostenibile sul piano ambientale.
+
+
+PRINCIPI
+
+1. Coerenza, legalità ed efficienza
+2. Responsabilità, cautela e sostenibilità
+3. Creatività ed Innovazione
+4. Solidarietà sociale, equità e sicurezza.
+8. Consapevolezza
+9. Semplicità e relazionalità
+
+AMBITI
+C_Ricerca e innovazione tecnologica
+D_Welfare di comunità e servizi
+H_Finanza etica
+I_Energie rinnovabili ed efficienza energetica
+</item>
+        <item>La MECC è uno strumento di finanza etica della Fondazione di Comunità di Messina, nato con l’obiettivo di promuovere l’economia civile sui territori di riferimento delle reti etiche italiane, a partire da quelle siciliane e toscane.
+
+
+PRINCIPI
+1. Coerenza, legalità ed efficienza
+4. Solidarietà sociale, equità e sicurezza
+5. Partecipazione
+8. Consapevolezza
+
+AMBITI
+E_Servizi alle imprese
+D_Welfare di comunità e servizi
+H_Finanza etica
+</item>
+        <item>EcoGAStronomia è il Gruppo d’Acquisto Solidale promosso da Fondazione di Comunità di Messina in collaborazione con Slow Food Valdemone, per sostenere i prodotti locali buoni, puliti e giusti.
+
+
+PRINCIPI
+1. Coerenza, legalità ed efficienza
+2. Responsabilità, cautela e sostenibilità
+4. Solidarietà sociale, equità e sicurezza
+5. Partecipazione
+7. Genius loci
+8. Consapevolezza
+
+AMBITI
+D_Welfare di comunità e servizi
+L_Produzioni e manufatti
+M_Produzioni agroalimentari
+</item>
+        <item>EcoS-Med è una cooperativa sociale nata per mettere in relazione persone, associazioni, pezzi etici dell’economia meridionale e comunità. La mission è promuovere giustizia sociale e nuovi modelli di sviluppo locale sostenibile.
+
+
+PRINCIPI
+1. Coerenza, legalità ed efficienza
+2. Responsabilità, cautela e sostenibilità
+3. Creatività ed Innovazione
+4. Solidarietà sociale, equità e sicurezza.
+8. Consapevolezza
+9. Semplicità e relazionalità
+
+AMBITI
+D_Welfare di comunità e servizi
+F_Formazione
+H_Finanza etica
+</item>
+    </string-array>
+
+    <string-array name="url_company_details">
+        <item>www.fdcmessina.org/index.php/pag-sezione/birrificio-messina/</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/fondazione-horcynus-orca/</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/esco/</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/mecc/</item>
+        <item>www.gas.fdcmessina.org/gas_messina/00000305_GAS_Messina.html</item>
+        <item>www.fdcmessina.org/index.php/pag-sezione/ecos-med/</item>
+    </string-array>
+
+
+    <string name="action_reset">Reset</string>
+
+    <string-array name="tab_section">
+        <item>Principi</item>
+        <item>Ambiti</item>
+    </string-array>
+
+    <string-array name="principles_titles">
+        <item>1 Coerenza, legalità ed efficienza</item>
+        <item>2 Responsabilità, cautela e sostenibilità</item>
+        <item>3 Creatività ed Innovazione</item>
+        <item>4 Solidarietà sociale, equità e sicurezza</item>
+        <item>5 Partecipazione</item>
+        <item>6 Cura e bellezza</item>
+        <item>7 Genius loci</item>
+        <item>8 Consapevolezza</item>
+        <item>9 Semplicità e relazionalità</item>
+    </string-array>
+
+    <string-array name="principles_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="principles_weight">
+        <item>0.77</item>
+        <item>0.57</item>
+        <item>0.60</item>
+        <item>0.77</item>
+        <item>0.48</item>
+        <item>0.92</item>
+        <item>0.35</item>
+        <item>0.31</item>
+        <item>0.20</item>
+    </string-array>
+
+    <string-array name="areas_titles">
+        <item>A Cultura, arte</item>
+        <item>B Progettazione e design</item>
+        <item>C Ricerca e innovazione tecnologica</item>
+        <item>D Welfare di comunità e servizi</item>
+        <item>E Servizi alle imprese</item>
+        <item>F Formazione</item>
+        <item>G Informatica</item>
+        <item>H Finanza etica</item>
+        <item>I Energie rinnovabili ed efficenza energetica</item>
+        <item>L Produzioni e manufatti</item>
+        <item>M Produzioni agroalimentari</item>
+        <item>N Archivi e documentazione</item>
+
     </string-array>
 </resources>
