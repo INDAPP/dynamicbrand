@@ -64,7 +64,7 @@ public class PrincipleViewAdapter extends RecyclerView.Adapter<PrincipleViewAdap
             mTitle = (TextView) view.findViewById(R.id.title);
             mSpinner = (Spinner) view.findViewById(R.id.spinner);
             mSpinner.setAdapter(new ArrayAdapter<>(view.getContext(),
-                    android.R.layout.simple_spinner_item,values));
+                    R.layout.spinner_item,values));
             mView.setOnClickListener(this);
             mSpinner.setOnItemSelectedListener(this);
         }
