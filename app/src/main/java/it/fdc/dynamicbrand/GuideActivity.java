@@ -1,25 +1,22 @@
 package it.fdc.dynamicbrand;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import java.util.Arrays;
-
-public class LicencesActivity extends AppCompatActivity {
+public class GuideActivity extends AppCompatActivity {
 public String[] mArray;
     TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_licences);
+        setContentView(R.layout.activity_guide);
 
 
-        mTextView = (TextView)findViewById(R.id.licenseText);
+        mTextView = (TextView)findViewById(R.id.guideText);
 
-
-        mArray = getResources().getStringArray(R.array.name_array_like_library_list);
+        mArray = getResources().getStringArray(R.array.guide_strings);
         int i;
         String content = "";
         for(i=0;i<mArray.length;i++)

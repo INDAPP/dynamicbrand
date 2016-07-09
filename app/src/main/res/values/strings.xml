@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">Dynamic Brand</string>
+
+    <string name="info_t">Info sulla metodologia TSR</string>
+    <string name="info1">La metodologia dei Territori Socialmente Responsabili TSR® è un approccio partecipativo e co-certificabile ideato dalla rete europea dell’economia sociale e solidale REVES e adottato dalla Fondazione di Comunità di Messina. È uno strumento di costruzione di coesione e capitale sociale mirato a far convergere le politiche e le pratiche di enti pubblici, organizzazioni e imprese verso i principi in cui si riconosce la comunità locale.</string>
+    <string name="guide_title">Guida</string>
+    <string name="license_title">Crediti</string>
+    <string-array name="name_array_like_library_list">
+        <item>Realizzazione avvenuta nel contesto del Social Hackathon Umbria 2016, organizzato dall’Associazione Centro Studi Città di Foligno nel quadro del progetto Erasmus+ KA2 for Youth Generation0101 n. HR2014-HR01-KA205-007214.</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="guide_strings">
+        <item>guida1</item>
+        <item>guida2</item>
+        <item>guida3</item>
+    </string-array>
+
     <string name="choose_browser">Con quale browser vuoi continuare?</string>
 
     <string-array name="company_name">
@@ -173,5 +190,6 @@ H_Finanza etica
         <item>L Produzioni e manufatti</item>
         <item>M Produzioni agroalimentari</item>
         <item>N Archivi e documentazione</item>
+
     </string-array>
 </resources>
