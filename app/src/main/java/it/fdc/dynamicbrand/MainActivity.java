@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this,BrandsActivity.class);
                 break;
             case R.id.btnGuide:
-
+                intent = new Intent(this, GuideActivity.class);
                 break;
             case R.id.btnContacts:
-
+                intent = new Intent(this, DescriptionActivity.class);
                 break;
             case R.id.btnLicence:
                 intent = new Intent(this,LicencesActivity.class);

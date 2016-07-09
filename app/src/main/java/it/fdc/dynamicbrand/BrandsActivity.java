@@ -2,11 +2,9 @@ package it.fdc.dynamicbrand;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -143,7 +141,7 @@ public class BrandsActivity extends AppCompatActivity{
 
         List<Data> data = new ArrayList<>();
         for(int i=0; i<companyName.length; i++) {
-            int imageId = companyLogos.getResourceId(i,R.drawable.ic_fire_tsr);
+            int imageId = companyLogos.getResourceId(i,R.drawable.ic_birrificiomessima);
 
 //            Drawable logo = companyLogos.getDrawable(i);
             data.add(new Data(companyName[i], companyDescription[i], imageId ,companyUrlDetails[i]));

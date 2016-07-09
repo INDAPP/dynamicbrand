@@ -67,35 +67,35 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="Genera Logo"
+            android:text="Genera Marchio"
             android:id="@+id/btnGeneration"
             android:background="@drawable/button_type_fill"
             android:textColor="@color/abc_secondary_text_material_dark"
-            android:textSize="15sp"
-            android:gravity="left|center_vertical"
+            android:textSize="18sp"
             android:paddingLeft="10sp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
             android:layout_below="@+id/imageView"
             android:layout_alignLeft="@+id/imageView"
             android:layout_alignStart="@+id/imageView"
-            android:layout_margin="5dp" />
+            android:layout_margin="5dp"
+            android:gravity="center" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="Brand Esistenti"
+            android:text="Marchi Certificati"
             android:id="@+id/btnBrands"
             android:background="@drawable/button_type_fill"
             android:textColor="@color/abc_secondary_text_material_dark"
-            android:textSize="15sp"
-            android:gravity="left|center_vertical"
+            android:textSize="18sp"
             android:paddingLeft="10sp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
             android:layout_below="@+id/btnGeneration"
             android:layout_alignLeft="@+id/btnGeneration"
             android:layout_alignStart="@+id/btnGeneration"
-            android:layout_margin="5dp" />
+            android:layout_margin="5dp"
+            android:gravity="center" />
 
         <Button
             android:layout_width="match_parent"

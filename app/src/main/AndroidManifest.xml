@@ -9,22 +9,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GuideActivity"/>
+        <activity android:name=".GuideActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/activity_guide"
+            />
         <activity android:name=".GenerationActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:label="@string/activity_generation"/>
         <activity android:name=".BrandsActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:label="@string/activity_brands"/>
+        <activity android:name=".DescriptionActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/activity_description"/>
         <activity
             android:name=".InfoActivity"
             android:parentActivityName=".BrandsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LicencesActivity" />
+        <activity android:name=".LicencesActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/activity_info"/>
 
 
     </application>

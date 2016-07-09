@@ -19,12 +19,6 @@ public class DescriptionActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
 
-        TextView tTextView = (TextView) findViewById(R.id.description_title);
-        TextView dTextView = (TextView) findViewById(R.id.description_text);
-
-        tTextView.setText(R.string.info_t);
-        dTextView.setText(R.string.info1);
-
         findViewById(R.id.facebookButton).setOnClickListener(this);
         findViewById(R.id.mailButton).setOnClickListener(this);
         findViewById(R.id.webButton).setOnClickListener(this);
@@ -53,7 +47,7 @@ public class DescriptionActivity extends AppCompatActivity implements View.OnCli
                 intent.setData(Uri.parse(url));
                 break;
             case R.id.webButton:
-                String mail = "http://www.fdcmessina.org";
+                String mail = "http://www.fdcmessina.org/index.php/pag-sezione/programmi-di-democrazia-partecipativa/";
                 intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(mail));
                 break;

@@ -13,16 +13,7 @@ public String[] mArray;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guide);
 
-
         mTextView = (TextView)findViewById(R.id.guideText);
-
-        mArray = getResources().getStringArray(R.array.guide_strings);
-        int i;
-        String content = "";
-        for(i=0;i<mArray.length;i++)
-        {
-            content += mArray[i] + "\n"+ "\n";
-        }
-        mTextView.setText(content);
+        mTextView.setText(R.string.guide_strings);
     }
 }

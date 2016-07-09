@@ -24,7 +24,8 @@
             app:expandedTitleMarginBottom="32dp"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title">
 
             <ImageView
                 android:id="@+id/logo_company"
@@ -32,8 +33,7 @@
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
-                app:layout_collapseMode="parallax"
-                android:src="@drawable/ic_fire_tsr" />
+                app:layout_collapseMode="parallax" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/anim_toolbar"
@@ -56,6 +56,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:paddingTop="24dp">
 
             <TextView
@@ -68,11 +69,13 @@
             <Button
                 android:id="@+id/more_info"
                 android:background="@drawable/button_type_red"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
+                android:padding="16dp"
                 android:layout_margin="16dp"
-                android:text="Vai alla pagina" />
+                android:drawableRight="@drawable/ic__right"
+                android:text="@string/info_more_button" />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

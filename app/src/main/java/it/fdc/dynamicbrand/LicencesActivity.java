@@ -7,25 +7,17 @@ import android.widget.TextView;
 import java.util.Arrays;
 
 public class LicencesActivity extends AppCompatActivity {
-public String[] mArray;
-    TextView mTextView;
+    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_licences);
-
-
         mTextView = (TextView)findViewById(R.id.licenseText);
 
-
-        mArray = getResources().getStringArray(R.array.name_array_like_library_list);
-        int i;
+        String[] lines = getResources().getStringArray(R.array.name_array_like_library_list);
         String content = "";
-        for(i=0;i<mArray.length;i++)
-        {
-            content += mArray[i] + "\n"+ "\n";
-        }
+        for(String line: lines) content += line + "\n\n";
         mTextView.setText(content);
     }
 }
