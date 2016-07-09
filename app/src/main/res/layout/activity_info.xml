@@ -61,14 +61,16 @@
             <TextView
                 android:id="@+id/description_company"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textSize="14dp"/>
 
             <Button
                 android:id="@+id/more_info"
                 android:background="@drawable/button_type_red"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 android:layout_margin="16dp"
                 android:text="Vai alla pagina" />
         </LinearLayout>

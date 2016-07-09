@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Dynamic Brand</string>
+    <string name="choose_browser">Con quale browser vuoi continuare?</string>
 
     <string-array name="company_name">
         <item>Birrificio Messina</item>
@@ -11,12 +12,102 @@
     </string-array>
 
     <string-array name="company_description">
-        <item>La cooperativa Birrificio Messina nasce nel 2013 dalla volontà di 15 birrai disoccupati che hanno investito il proprio TFR e i proventi di una raccolta fondi per riavviare in città la storica produzione di birra.</item>
-        <item>blablabladddd</item>
-        <item>lib3</item>
-        <item>blablalbalablab</item>
-        <item>blablabladddd</item>
-        <item>lib3</item>
+        <item>La cooperativa Birrificio Messina nasce nel 2013 dalla volontà di 15 birrai disoccupati che hanno investito il proprio TFR e i proventi di una raccolta fondi per riavviare in città la storica produzione di birra.
+
+PRINCIPI:
+1. Coerenza, legalità ed efficienza
+2. Responsabilità, cautela e sostenibilità
+4. Solidarietà sociale, equità e sicurezza
+5. Partecipazione
+8. Consapevolezza
+9. Semplicità e relazionalità
+
+AMBITI
+M_Produzioni agroalimentari
+</item>
+        <item>La Fondazione Horcynus Orca promuove da anni percorsi internazionali di ricerca sulle economie sociali e sulle estetiche del Mediterraneo che più di ogni altra forma del sapere umano hanno la capacità di anticipare bisogni, desideri e visioni dei popoli.
+
+PRINCIPI:
+1. Coerenza, legalità ed efficienza;
+2. Responsabilità, cautela e sostenibilità
+3. Creatività ed Innovazione
+5. Partecipazione
+7. Genius loci
+8. Consapevolezza
+
+
+AMBITI:
+A_Cultura, arte
+B_Progettazione e design
+C_Ricerca e innovazione tecnologica
+H_Finanza etica
+I_Energie rinnovabili ed efficenza energetica
+N_Archivi e documentazione
+</item>
+        <item>Solidarity and Energy nasce per promuovere programmi di social green economy con iniziative innovative di riconversione a basso impatto energetico. L’obiettivo è sostenere con i risparmi ottenuti forme evolute di economia civile sostenibile sul piano ambientale.
+
+
+PRINCIPI
+
+1. Coerenza, legalità ed efficienza
+2. Responsabilità, cautela e sostenibilità
+3. Creatività ed Innovazione
+4. Solidarietà sociale, equità e sicurezza.
+8. Consapevolezza
+9. Semplicità e relazionalità
+
+AMBITI
+C_Ricerca e innovazione tecnologica
+D_Welfare di comunità e servizi
+H_Finanza etica
+I_Energie rinnovabili ed efficienza energetica
+</item>
+        <item>La MECC è uno strumento di finanza etica della Fondazione di Comunità di Messina, nato con l’obiettivo di promuovere l’economia civile sui territori di riferimento delle reti etiche italiane, a partire da quelle siciliane e toscane.
+
+
+PRINCIPI
+1. Coerenza, legalità ed efficienza
+4. Solidarietà sociale, equità e sicurezza
+5. Partecipazione
+8. Consapevolezza
+
+AMBITI
+E_Servizi alle imprese
+D_Welfare di comunità e servizi
+H_Finanza etica
+</item>
+        <item>EcoGAStronomia è il Gruppo d’Acquisto Solidale promosso da Fondazione di Comunità di Messina in collaborazione con Slow Food Valdemone, per sostenere i prodotti locali buoni, puliti e giusti.
+
+
+PRINCIPI
+1. Coerenza, legalità ed efficienza
+2. Responsabilità, cautela e sostenibilità
+4. Solidarietà sociale, equità e sicurezza
+5. Partecipazione
+7. Genius loci
+8. Consapevolezza
+
+AMBITI
+D_Welfare di comunità e servizi
+L_Produzioni e manufatti
+M_Produzioni agroalimentari
+</item>
+        <item>EcoS-Med è una cooperativa sociale nata per mettere in relazione persone, associazioni, pezzi etici dell’economia meridionale e comunità. La mission è promuovere giustizia sociale e nuovi modelli di sviluppo locale sostenibile.
+
+
+PRINCIPI
+1. Coerenza, legalità ed efficienza
+2. Responsabilità, cautela e sostenibilità
+3. Creatività ed Innovazione
+4. Solidarietà sociale, equità e sicurezza.
+8. Consapevolezza
+9. Semplicità e relazionalità
+
+AMBITI
+D_Welfare di comunità e servizi
+F_Formazione
+H_Finanza etica
+</item>
     </string-array>
 
     <string-array name="url_company_details">
